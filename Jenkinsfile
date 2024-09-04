@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
     agent anytools{
         maven "MAVEN3"
         jdk "OracleJDK8"
@@ -22,4 +22,5 @@ pipeline{
                 sh 'mvn -s settins.xml -DskipTests install'
             }
     }
+}
 }
