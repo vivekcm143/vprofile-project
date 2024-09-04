@@ -15,13 +15,12 @@ pipeline {
         NEXUSPORT = '8081'
         NEXUS_GRP_REPO ='vpro-maven-group'
         NEXUS_LOGIN = 'nexusLogin'
-
     }
-    stages{
+    stages {
         stage('Build'){
-            steps{
-                sh 'mvn -s settins.xml -DskipTests install'
+            steps {
+                sh 'mvn -s settings.xml -DskipTests install'
             }
+        }
     }
-}
 }
